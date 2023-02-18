@@ -1,1 +1,1 @@
-# IoT Environmental Monitor Station
+# IoT Environmental Monitoring Station
