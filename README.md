@@ -1,2 +1,1 @@
-# env-monitor
-IoT Environmental Monitor Station
+# IoT Environmental Monitor Station
