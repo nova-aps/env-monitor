@@ -7,6 +7,13 @@ PubSubClient Nick O'Leary 2.8.0
 ArduinoJson Benoit Blanchon 6.19.3
 ArduinoHTTPClient 0.4.0
 
+# MultiGas Sensor data seems to require conversion to ppm
+
+https://wiki.seeedstudio.com/Grove-Multichannel-Gas-Sensor-V2/
+https://forum.seeedstudio.com/t/multichannel-v2-gas-sensor-to-ppm/261794/5
+https://github.com/Seeed-Studio/Seeed_Arduino_MultiGas/blob/master/examples/demo_terminal/demo_terminal.ino
+https://forum.seeedstudio.com/t/grove-multichannel-gas-sensor-v2-calibration/253136/12
+
 # Extract telemetry data from Thingsboard API
 
 https://thingsboard-server:8080/swagger-ui/

@@ -110,18 +110,33 @@ void loop() {
   uint32_t c2h5oh = 0;
   uint32_t voc = 0;
   uint32_t co = 0;
-  
+ 
+  float no2i_ppm = 0;
+  float c2h5oh_ppm = 0;
+  float voc_ppm = 0;
+  float co_ppm = 0;
+
   no2 = gas.measure_NO2(); 
   c2h5oh = gas.measure_C2H5OH(); 
   voc = gas.measure_VOC(); 
   co = gas.measure_CO();
 
+  if (no2 > 999) no2 = 999;
+  no2_ppm = gas.calcVol(no2);
+ 
+  if (c2h5oh > 999) c2h5oh = 999;
+  c2h5oh_ppm = gas.calcVol(c2h5oh);
   
-  tb.sendTelemetryInt("no2", no2);
-  tb.sendTelemetryInt("c2h5oh", c2h5oh);
-  tb.sendTelemetryInt("voc", voc);
-  tb.sendTelemetryInt("co", co);
-  
+  if (voc > 999) voc = 999;
+  voc_ppm = gas.calcVol(voc);
+
+  if (co > 999) co = 999;
+  co_ppm = gas.calcVol(co);
+
+  tb.sendTelemetryInt("no2", no2_ppm);
+  tb.sendTelemetryInt("c2h5oh", c2h5oh_ppm);
+  tb.sendTelemetryInt("voc", voc_ppm);
+  tb.sendTelemetryInt("co", co_ppm);
 
   /***************************************
    * Particulate Matter
